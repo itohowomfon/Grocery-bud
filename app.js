@@ -112,8 +112,6 @@ function addTolocalStorage(id, value) {
     let items = getLocalStorage();
     items.push(grocery);
     localStorage.setItem("list", JSON.stringify(items));
-
-    //console.log("added to local storage");
 }
 function removeFromLocalStorage(id) {
     let items = getLocalStorage();
@@ -130,7 +128,7 @@ function editLocalStorage(id, value) {
     items = items.map(function(item) {
         if(item.id === id) {
             item.value = value;
-        }
+        }       
         return item;
     });
     localStorage.setItem("list", JSON.stringify(items));
